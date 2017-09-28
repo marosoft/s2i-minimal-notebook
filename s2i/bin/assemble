@@ -15,6 +15,6 @@ rm -rf /tmp/src
 # which will in turn be used as an S2I builder image.
 
 if [ -f /home/$NB_USER/work/requirements.txt ]; then
-    (cd /home/$NB_USER/work && conda install -y --file requirements.txt)
+    (cd /home/$NB_USER/work && pip install -r requirements.txt)
     rm /home/$NB_USER/work/requirements.txt
 fi
